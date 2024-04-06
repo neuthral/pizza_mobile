@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #e5b367;
+    color: #5F2240;
+    position: relative;
+    font-family: Ubuntu;
+    overflow-x: hidden;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+}
+
+nav {
+    margin: 0;
+    padding: 4px;
+    height: 32px;
+    width: 100%;
+    background: #5F2240;
+}
+
+nav .cart {
+    float: right;
+    margin-right: 16px;
+}
+
+nav .cart b {
+    position: absolute;
+    right: 8px;
+    display: block;
+    min-width: 10px;
+    padding-left: auto;
+    background-color: #FAFAFA;
+    border: 2px solid #FAFAFA;
+    border-radius: 8px;
+    font-size: small;
+    color: #5F2240;
+}
+
+h4 {
+    color: #5F2240;
+}
+
+button {
+    background-color: #5F2240;
+    color: #FAFAFA;
+    font-weight: bolder;
+    font-size: larger;
+    border: 0;
+    border-radius: 4px;
+    height: 60px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.page {
+    min-height: 600px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.menu-links {
+    margin-right: 40px;
+}
+.menu-links li {
+    display: inline;
+}
+
+.menu-links a {
+    color: #5F2240;
+    font-weight: bolder;
+}
+
+.product-list li {
+    clear: left;
+    display: block;
+    width: 93%;
+    height: 60px;
+    margin-bottom: 8px;
+    background: #fafafa;
+    border: 0px solid;
+    border-radius: 8px;
+}
+.product-list li b,i {
+    padding: 8px;
+}
+.product-list li hr {
+    width: 16px;    
+}
+.product-list li b {
+    font-size: larger;
+    
+}
+.product-list li i {
+    font-size: smaller;
+}
+.product-list li u {
+    float: right;
+    margin-right: 8px;
+}
+.product-list a {
+    float: right;
+    position: inherit;
+    display: inline-block;
+    top: 0;
+    border: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 60px;
+    width: 60px;
+    background: #5F2240 url(add.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-list a:hover {
+    cursor: pointer;
+}
+
+/* MODAL STYLES */
+.jw-modal {
+    /* modals are hidden by default */
+    display: none;
+    /* modal container fixed across whole screen */
+    position: fixed;
+    inset: 0;
+    /* z-index must be higher than everything else on the page */
+    z-index: 10000;
+    /* semi-transparent black background exposed by padding */
+    background-color: rgba(0, 0, 0, .75);
+    padding: 8px;
+    /* enables scrolling for tall modals */
+    overflow: auto;
+}
+
+.jw-modal.open {
+    display: block;
+}
+
+.jw-modal-body {
+    padding: 20px;
+    background: #FAFAFA;
+}
+
+body.jw-modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
