@@ -8,14 +8,7 @@ const items = [
         "edit": "1",
         "info": null,
         "available": "1",
-        "toppings": [
-            {
-                "name": "salami"
-            },
-            {
-                "name": "jauheliha"
-            }
-        ]
+        "toppings": ["salami","mincemeat"]
     },
     {
         "id": 2,
@@ -27,15 +20,7 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "salami"
-            }
+            "ham","mincemeat","salami"
         ]
     },
     {
@@ -48,9 +33,7 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "jauheliha"
-            }
+            "mincemeat"
         ]
     },
     {
@@ -63,15 +46,7 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "salami"
-            },
-            {
-                "name": "kinkku"
-            }
+            "ham","salami","ham"
         ]
     },
     {
@@ -84,15 +59,9 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "salami"
-            },
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "salami"
-            }
+            "salami",
+            "ham",
+            "salami"
         ]
     },
     {
@@ -105,15 +74,9 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "kinkku"
-            }
+            "mincemeat",
+            "ham",
+            "ham"
         ]
     },
     {
@@ -126,15 +89,9 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "kinkku"
-            }
+            "mincemeat",
+            "mincemeat",
+            "ham"
         ]
     },
     {
@@ -147,9 +104,7 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "salami"
-            }
+            "salami"
         ]
     },
     {
@@ -162,15 +117,9 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "salami"
-            },
-            {
-                "name": "kinkku"
-            }
+            "mincemeat",
+            "salami",
+            "ham"
         ]
     },
     {
@@ -183,15 +132,9 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "salami"
-            },
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "kinkku"
-            }
+            "salami",
+            "ham",
+            "ham"
         ]
     },
     {
@@ -204,12 +147,8 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "kinkku"
-            }
+            "ham",
+            "ham"
         ]
     },
     {
@@ -222,15 +161,9 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "salami"
-            },
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "salami"
-            }
+            "salami",
+            "mincemeat",
+            "salami"
         ]
     },
     {
@@ -243,15 +176,9 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "kinkku"
-            }
+            "ham",
+            "mincemeat",
+            "ham"
         ]
     },
     {
@@ -264,250 +191,74 @@ const items = [
         "info": null,
         "available": "1",
         "toppings": [
-            {
-                "name": "salami"
-            },
-            {
-                "name": "jauheliha"
-            }
-        ]
-    },
-    {
-        "id": 15,
-        "category_id": "0",
-        "name": "Dalaman Special",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "jauheliha"
-            }
-        ]
-    },
-    {
-        "id": 16,
-        "category_id": "0",
-        "name": "Wiking",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "salami"
-            },
-            {
-                "name": "jauheliha"
-            }
-        ]
-    },
-    {
-        "id": 17,
-        "category_id": "0",
-        "name": "Quattro Stagioni",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "salami"
-            },
-            {
-                "name": "salami"
-            },
-            {
-                "name": "jauheliha"
-            }
-        ]
-    },
-    {
-        "id": 18,
-        "category_id": "0",
-        "name": "Indiana",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "salami"
-            },
-            {
-                "name": "kinkku"
-            }
-        ]
-    },
-    {
-        "id": 19,
-        "category_id": "0",
-        "name": "Turkin Tulinen",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "salami"
-            },
-            {
-                "name": "kinkku"
-            }
-        ]
-    },
-    {
-        "id": 20,
-        "category_id": "0",
-        "name": "Las Vegas",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "salami"
-            }
-        ]
-    },
-    {
-        "id": 21,
-        "category_id": "0",
-        "name": "Pepperoni",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "jauheliha"
-            }
-        ]
-    },
-    {
-        "id": 22,
-        "category_id": "0",
-        "name": "Ateena",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "jauheliha"
-            },
-            {
-                "name": "jauheliha"
-            }
-        ]
-    },
-    {
-        "id": 23,
-        "category_id": "0",
-        "name": "Paradise",
-        "norm": "8.5",
-        "big": "15.5",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "salami"
-            },
-            {
-                "name": "salami"
-            }
-        ]
-    },
-    {
-        "id": 24,
-        "category_id": "0",
-        "name": "Kuten Haluatte",
-        "norm": "9.5",
-        "big": "17",
-        "edit": "1",
-        "info": null,
-        "available": "1",
-        "toppings": [
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "kinkku"
-            },
-            {
-                "name": "kinkku"
-            }
+            "salami"
+            ,
+            "mincemeat"
+
         ]
     }
 ]
 
+const toppings = [
+    "ham",
+    "mincemeat",
+    "salami",
+    "pepperoni",
+    "mozarella",
+    "tomato",
+    "paprika",
+    "jalapeno",
+    "chili"
+]
+
 // open modal by id
 function openModal(id) {
-    document.getElementById(id).classList.add('open');
-    document.body.classList.add('jw-modal-open');
+    let modalElement = document.getElementById('modal-1')
+    modalElement.classList.add('open')
+    modalElement.querySelector('h2').innerHTML = items[id].name
+    modalElement.querySelector('p').innerHTML = items[id].info || ''
+    modalElement.querySelector('#normLabel').innerHTML = `normal ${items[id].norm}`
+    modalElement.querySelector('#bigLabel').innerHTML = `big ${items[id].big}`
+    // create options for toppings
+    toppings.forEach(item => {
+        let option = document.createElement('option')
+        option.value = item
+        option.innerHTML = item
+        if (Object.values(items[id].toppings).includes(item)) {
+            option.setAttribute('selected', true)
+            console.log(item)
+        }
+        modalElement.querySelector('#toppings').appendChild(option)
+    })
+    modalElement.querySelector('#toppings').size = toppings.length
+
+    console.log(items[id])
+    document.body.classList.add('jw-modal-open')
 }
 
 // close currently open modal
 function closeModal() {
-    document.querySelector('.jw-modal.open').classList.remove('open');
-    document.body.classList.remove('jw-modal-open');
+    document.querySelector('.jw-modal.open').classList.remove('open')
+    document.body.classList.remove('jw-modal-open')
+    document.getElementById('modal-1').querySelector('form').reset()
+    document.getElementById('modal-1').querySelectorAll('#toppings option').forEach(option => {
+        option.remove()
+    })
+
 }
 
 window.addEventListener('load', function () {
     // close modals on background click
     document.addEventListener('click', event => {
         if (event.target.classList.contains('jw-modal')) {
-            closeModal();
+            closeModal()
         }
     });
 })
 
 function setAttributes(el, attrs) {
     for (var key in attrs) {
-        el.setAttribute(key, attrs[key]);
+        el.setAttribute(key, attrs[key])
     }
 }
 
@@ -515,14 +266,20 @@ const ul = document.querySelector('#listContainer')
 const listTemplate = document.querySelector('#listTemplate')
 
 function getItems() {
-        
+
     items.forEach(item => {
         let listClone = listTemplate.content.cloneNode(true)
-        listClone.querySelector('b').textContent = item.id+' '+item.name
+        listClone.querySelector('b').textContent = item.id + ' ' + item.name
         item.toppings.forEach(item => {
-            listClone.querySelector('i').textContent += item.name+', '
+            listClone.querySelector('i').textContent += item + ', '
         })
         listClone.querySelector('u').textContent = item.norm + '€'
+
+        setAttributes(listClone.querySelector('a'), {
+            'onclick': `openModal(${item.id - 1})`
+        })
+
         ul.appendChild(listClone)
     })
+
 }

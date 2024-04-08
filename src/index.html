@@ -24,6 +24,7 @@
         </nav>
         <div>
             <div class="page">
+
                 <center>
                     <br />
                     <img src="./demo_logo_1.svg">
@@ -40,7 +41,7 @@
                 <ul class="product-list" id="listContainer">
                     <template id="listTemplate">
                         <li>
-                            <b>{product-name}</b> <a onclick="openModal(this)"></a><u></u>
+                            <b>{product-name}</b> <a onclick="openModal(id)"></a><u></u>
                             <p>
                                 <i></i>
                             </p>
@@ -51,8 +52,34 @@
 
             <div id="modal-1" class="jw-modal">
                 <div class="jw-modal-body">
-                    <h3>A custom modal popup</h3>
-                    <button onclick="closeModal()">Close</button>
+                    <h2>{item name}</h2>
+                    <p>{item info}</p>
+                    
+                    <form>
+                        <div style="display: inline-block; width: 49%;">
+                            <input type="radio" id="norm" name="price" value="normal">
+                            <label id="normLabel" for="norm">normal</label>
+                            <br>
+                            <input type="radio" id="big" name="price" value="big">
+                            <label id="bigLabel" for="big">big</label>
+                            <br>
+                            <input type="checkbox" name="extra" id="oregano">
+                            <label for="oregano">oregano</label>
+                            <input type="checkbox" name="extra" id="garlic">
+                            <label for="garlic">garlic</label>
+                        </div>
+                        <div style="display: inline-block;">
+                            <label for="toppings">Choose toppings:</label>
+                            <br>
+                            <select id="toppings" name="toppings" size="4" multiple>
+                                
+                            </select>
+                        </div>
+                    </form>
+
+                    <p>
+                        <button onclick="closeModal()">Close</button>
+                    </p>
                 </div>
             </div>
 
