@@ -208,7 +208,15 @@ const toppings = [
     "tomato",
     "paprika",
     "jalapeno",
-    "chili"
+    "chili",
+    "ananas",
+    "kebab",
+    "chicken",
+    "pickles",
+    "tuna",
+    "bacon",
+    "feta cheese",
+    "olives"
 ]
 
 // open modal by id
@@ -221,16 +229,27 @@ function openModal(id) {
     modalElement.querySelector('#bigLabel').innerHTML = `big ${items[id].big}`
     // create options for toppings
     toppings.forEach(item => {
-        let option = document.createElement('option')
-        option.value = item
-        option.innerHTML = item
+        let span = document.createElement('span')
+
+        let option = document.createElement('input')
+        setAttributes(option, {
+            'type': 'checkbox',
+            'value': item,
+            'id': item
+        })
+        let label = document.createElement('label')
+        setAttributes(label, {
+            'for': item
+        })
+        label.innerHTML = item
         if (Object.values(items[id].toppings).includes(item)) {
-            option.setAttribute('selected', true)
+            option.setAttribute('checked', true)
             console.log(item)
         }
-        modalElement.querySelector('#toppings').appendChild(option)
+        span.appendChild(option)
+        span.appendChild(label)
+        modalElement.querySelector('#toppings').appendChild(span)
     })
-    modalElement.querySelector('#toppings').size = toppings.length
 
     console.log(items[id])
     document.body.classList.add('jw-modal-open')
@@ -241,7 +260,7 @@ function closeModal() {
     document.querySelector('.jw-modal.open').classList.remove('open')
     document.body.classList.remove('jw-modal-open')
     document.getElementById('modal-1').querySelector('form').reset()
-    document.getElementById('modal-1').querySelectorAll('#toppings option').forEach(option => {
+    document.getElementById('modal-1').querySelectorAll('#toppings span').forEach(option => {
         option.remove()
     })
 
@@ -269,12 +288,11 @@ function getItems() {
 
     items.forEach(item => {
         let listClone = listTemplate.content.cloneNode(true)
-        listClone.querySelector('b').textContent = item.id + ' ' + item.name
+        listClone.querySelector('b').textContent = `${item.id} ${item.name}`
         item.toppings.forEach(item => {
             listClone.querySelector('i').textContent += item + ', '
         })
-        listClone.querySelector('u').textContent = item.norm + '€'
-
+        listClone.querySelector('u').textContent = `${item.norm}€`
         setAttributes(listClone.querySelector('a'), {
             'onclick': `openModal(${item.id - 1})`
         })

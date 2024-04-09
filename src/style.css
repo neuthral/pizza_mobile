@@ -86,6 +86,7 @@ button:hover {
     background: #fafafa;
     border: 0px solid;
     border-radius: 8px;
+    padding-top: 4px;
 }
 .product-list li b,i {
     padding: 8px;
@@ -95,7 +96,6 @@ button:hover {
 }
 .product-list li b {
     font-size: larger;
-    
 }
 .product-list li i {
     font-size: smaller;
@@ -103,16 +103,18 @@ button:hover {
 .product-list li u {
     float: right;
     margin-right: 8px;
+    font-size: larger;
+    text-decoration: none;
 }
 .product-list a {
     float: right;
-    position: inherit;
+    position: relative;
     display: inline-block;
-    top: 0;
+    top: -4px;
     border: 0;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    height: 60px;
+    height: 64px;
     width: 60px;
     background: #5F2240 url(add.svg);
     background-size: 40px;
@@ -147,6 +149,7 @@ button:hover {
 .jw-modal-body {
     padding: 8px;
     background: #FAFAFA;
+    height: 440px;
 }
 
 body.jw-modal-open {
@@ -154,7 +157,18 @@ body.jw-modal-open {
     overflow-x: hidden;
 }
 
-select {
-    width: 150px;
-    margin: 10px;
+.toppings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.toppings span {
+    width: 220px;
+}
+.toppings input {
+    height: 16px;
+    width: 16px;
+    float: left;
+}
+.toppings label {
+    float: left;
 }

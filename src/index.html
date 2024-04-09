@@ -56,25 +56,28 @@
                     <p>{item info}</p>
                     
                     <form>
-                        <div style="display: inline-block; width: 49%;">
+                        <div>
                             <input type="radio" id="norm" name="price" value="normal">
                             <label id="normLabel" for="norm">normal</label>
+
                             <br>
                             <input type="radio" id="big" name="price" value="big">
                             <label id="bigLabel" for="big">big</label>
+
+                            <br>
                             <br>
                             <input type="checkbox" name="extra" id="oregano">
                             <label for="oregano">oregano</label>
                             <input type="checkbox" name="extra" id="garlic">
                             <label for="garlic">garlic</label>
-                        </div>
-                        <div style="display: inline-block;">
-                            <label for="toppings">Choose toppings:</label>
+
                             <br>
-                            <select id="toppings" name="toppings" size="4" multiple>
+                            <br>
+                            <div class="toppings" id="toppings">
                                 
-                            </select>
+                            </div>
                         </div>
+                        
                     </form>
 
                     <p>
