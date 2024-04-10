@@ -219,6 +219,7 @@ const toppings = [
     "olives"
 ]
 
+
 // open modal by id
 function openModal(id) {
     let modalElement = document.getElementById('modal-1')
@@ -227,31 +228,13 @@ function openModal(id) {
     modalElement.querySelector('p').innerHTML = items[id].info || ''
     modalElement.querySelector('#normLabel').innerHTML = `normal ${items[id].norm}`
     modalElement.querySelector('#bigLabel').innerHTML = `big ${items[id].big}`
-    // create options for toppings
-    toppings.forEach(item => {
-        let span = document.createElement('span')
 
-        let option = document.createElement('input')
-        setAttributes(option, {
-            'type': 'checkbox',
-            'value': item,
-            'id': item
-        })
-        let label = document.createElement('label')
-        setAttributes(label, {
-            'for': item
-        })
-        label.innerHTML = item
-        if (Object.values(items[id].toppings).includes(item)) {
+    let options = modalElement.querySelectorAll('.toppings input[type=checkbox]').values()
+    options.forEach(option => {
+        if (Object.values(items[id].toppings).includes(option.id)) {
             option.setAttribute('checked', true)
-            console.log(item)
         }
-        span.appendChild(option)
-        span.appendChild(label)
-        modalElement.querySelector('#toppings').appendChild(span)
     })
-
-    console.log(items[id])
     document.body.classList.add('jw-modal-open')
 }
 
@@ -260,8 +243,8 @@ function closeModal() {
     document.querySelector('.jw-modal.open').classList.remove('open')
     document.body.classList.remove('jw-modal-open')
     document.getElementById('modal-1').querySelector('form').reset()
-    document.getElementById('modal-1').querySelectorAll('#toppings span').forEach(option => {
-        option.remove()
+    document.getElementById('modal-1').querySelectorAll('input[type=checkbox]').forEach(option => {
+        option.removeAttribute('checked')
     })
 
 }
@@ -301,3 +284,51 @@ function getItems() {
     })
 
 }
+
+
+function addItem(event) {
+    event.preventDefault()
+    let form = document.querySelector('#itemForm')
+    let formData = new FormData(form)
+
+    let inputs = form.querySelectorAll('.toppings input[type=checkbox]').values()
+    let checks = []
+    inputs.forEach(i => (i.checked) ? checks.push(i.value): null)
+    formData.append('toppings', checks)
+
+    //const response = await fetch("stash.php", {
+    //  method: "POST",
+    //  body: formData,
+    //})
+    const values = [...formData.entries()]
+    cart.push(values)
+    document.querySelector('#numItems').innerHTML = cart.length
+    //const data = Object.fromEntries(formData.entries())
+    console.log(cart)
+}
+
+
+let formElement = document.getElementById('itemForm')
+// create options for toppings
+toppings.forEach(item => {
+    let span = document.createElement('span')
+    let option = document.createElement('input')
+    setAttributes(option, {
+        'type':     'checkbox',
+        'value':    item,
+        'id':       item
+    })
+
+    let label = document.createElement('label')
+    setAttributes(label, {
+        'for':      item
+    })
+
+    label.innerHTML = item
+    span.appendChild(option)
+    span.appendChild(label)
+
+    formElement.querySelector('#toppings').appendChild(span)
+})
+
+let cart = []

@@ -18,7 +18,7 @@
         <![endif]-->
         <nav>
             <a href="#cart" class="cart">
-                <b>14</b>
+                <b id="numItems"></b>
                 <img height="30px" src="cart.svg">
             </a>
         </nav>
@@ -55,9 +55,9 @@
                     <h2>{item name}</h2>
                     <p>{item info}</p>
                     
-                    <form>
+                    <form action="/" enctype="multipart/form-data" name="itemForm" id="itemForm" onsubmit="addItem(event)">
                         <div>
-                            <input type="radio" id="norm" name="price" value="normal">
+                            <input type="radio" id="norm" name="price" value="normal" checked>
                             <label id="normLabel" for="norm">normal</label>
 
                             <br>
@@ -66,9 +66,9 @@
 
                             <br>
                             <br>
-                            <input type="checkbox" name="extra" id="oregano">
+                            <input type="radio" name="extra" value="oregano">
                             <label for="oregano">oregano</label>
-                            <input type="checkbox" name="extra" id="garlic">
+                            <input type="radio" name="extra" value="garlic">
                             <label for="garlic">garlic</label>
 
                             <br>
@@ -76,13 +76,12 @@
                             <div class="toppings" id="toppings">
                                 
                             </div>
-                        </div>
-                        
+                        <p class="buttons">
+                            <button onclick="closeModal()">Close</button>
+                            <button type="submit">add</button>
+                        </p>
                     </form>
 
-                    <p>
-                        <button onclick="closeModal()">Close</button>
-                    </p>
                 </div>
             </div>
 
