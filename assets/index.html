@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>pizzeria quick</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="getItems()">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav>
+            <strong>PIZZA now!</strong>
+            <a href="#" class="cart" onclick="openCart()">
+                <b id="numItems"></b>
+                <img height="30px" src="cart.svg">
+            </a>
+        </nav>
+        <div class="page">
+            <center>
+                <br>
+                <img src="./demo_logo_1.svg">
+                <h4>quick pizza since 1996</h4>
+
+                <ul class="menu-links">
+                    <li><a href="#">pizzat</a> /</li>
+                    <li><a href="#">kebabit</a> /</li>
+                    <li><a href="#">grilli</a> /</li>
+                    <li><a href="#">juomat</a></li>
+                </ul>
+            </center>
+
+            <ul class="product-list" id="listContainer">
+                <template id="listTemplate">
+                    <li>
+                        <b>{product-name}</b> <a onclick="openModal(id)"></a><u></u>
+                        <p>
+                            <i></i>
+                        </p>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+        <div class="cartPage">
+            <div class="container">
+                <br>
+                <img src="./demo_logo_1.svg">
+                <h4>quick pizza since 1996</h4>
+                
+                <br>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <div id="modal-1" class="jw-modal">
+            <div class="jw-modal-body container">
+                <header>
+                    <h2>{item name}</h2>
+                </header>
+                
+                <p>{item info}</p>
+                
+                <form action="/" enctype="multipart/form-data" name="itemForm" id="itemForm" onsubmit="addItem(event)">
+                    <div class="selection">
+                        
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="norm" name="price" value="normal" checked>
+                                    <label id="normLabel" for="norm">normal</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="big" name="price" value="big">
+                                    <label id="bigLabel" for="big">big</label>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="oregano" name="extra" value="oregano">
+                                    <label for="oregano">oregano</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="garlic" name="extra" value="garlic">
+                                    <label for="garlic">garlic</label>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <h3>toppings</h3>
+                        <div class="toppings" id="toppings">
+
+                        </div>
+                        <br>
+                        <footer>
+                            <button onclick="closeModal()">Close</button>
+                            <button type="submit">add</button>
+                        </footer>
+                </form>
+            </div>
+        </div>
+
+        
+
+        <script src="app.js"></script>
+    </body>
+</html>

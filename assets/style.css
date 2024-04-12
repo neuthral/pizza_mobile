@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #e5b367 url(pizza.svg) no-repeat;
-    background-size: cover;
+    background-size: 1536px;
     color: #5F2240;
     position: relative;
     font-family: Ubuntu;
@@ -22,6 +22,12 @@ nav {
     height: 32px;
     width: 100%;
     background: #5F2240;
+}
+
+nav strong {
+    margin-left: 8px;
+    color: #e5b367;
+    font-size: x-large;
 }
 
 nav .cart {
@@ -60,10 +66,25 @@ button:hover {
     cursor: pointer;
 }
 
+.container {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .page {
     min-height: 600px;
     max-width: 640px;
     margin: 0 auto;
+}
+
+.cartPage {
+    display: none;
+    font-size: larger;
+    overflow-y: visible;
+}
+.cartPage table {
+    border: 2px dotted #cccccc;
 }
 
 .menu-links {
@@ -127,6 +148,7 @@ button:hover {
     cursor: pointer;
 }
 
+
 /* MODAL STYLES */
 .jw-modal {
     /* modals are hidden by default */
@@ -148,17 +170,56 @@ button:hover {
 }
 
 .jw-modal-body {
-    padding: 8px;
     background: #FAFAFA;
-    height: 440px;
-    max-width: 600px;
+    height: 720px;
+    min-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+.jw-modal-body header {
+    margin: 0;
+    padding: 4px;
+    padding-left: 16px;
+    background-color: #5F2240;
+    color: #e5b367;
 }
 
 body.jw-modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
     overflow-x: hidden;
+}
+.selection td:hover {
+    cursor: pointer;
+    background-color: #cccccc;
+}
+.selection label:hover {
+    cursor: pointer;
+    background-color: #cccccc;
+}
+.selection span:hover {
+    background-color: #cccccc;
+}
+.selection input[type=radio]:hover {
+    cursor: pointer;
+}
+.selection input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+.selection {
+    padding: 16px;
+}
+.selection td {
+    display: inline-block;
+    
+    vertical-align: bottom;
+    height: 32px;
+}
+.selection input[type=radio] {
+    display: block;
+    height: 32px;
+    width: 32px;
+    float: left;
 }
 
 .toppings {
@@ -166,13 +227,17 @@ body.jw-modal-open {
     grid-template-columns: repeat(2, 1fr);
 }
 .toppings span {
-    width: 220px;
+    display: flex;
+    align-items: center;
+    height: 32px;
 }
-.toppings input {
-    height: 16px;
-    width: 16px;
+.selection input[type=checkbox] {
+    display: block;
+    height: 32px;
+    width: 32px;
     float: left;
 }
-.toppings label {
-    float: left;
+
+.selection label {
+    font-size: larger;
 }

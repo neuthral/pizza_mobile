@@ -219,6 +219,11 @@ const toppings = [
     "olives"
 ]
 
+let cart = []
+// demo items
+cart.push(items[1])
+cart.push(items[2])
+cart.push(items[3])
 
 // open modal by id
 function openModal(id) {
@@ -302,33 +307,51 @@ function addItem(event) {
     //})
     const values = [...formData.entries()]
     cart.push(values)
-    document.querySelector('#numItems').innerHTML = cart.length
     //const data = Object.fromEntries(formData.entries())
     console.log(cart)
+    closeModal()
 }
 
+function openCart() {
+    const pageEl = document.querySelector('.page')
+    pageEl.style.display = 'none'
+    const cartEl = document.querySelector('.cartPage')
+    cartEl.style.display = 'contents'
+
+    const tableEL = cartEl.querySelector('table')
+    cart.forEach(item => {
+        let tr = document.createElement('tr')
+        let td = document.createElement('td')
+        td.innerHTML = item.name
+        tr.appendChild(td)
+        td = document.createElement('td')
+        td.innerHTML = '1'
+        tr.appendChild(td)
+        td = document.createElement('td')
+        td.innerHTML = item.norm
+        tr.appendChild(td)
+        tableEL.appendChild(tr)
+    })
+}
+
+document.querySelector('#numItems').innerHTML = cart.length
 
 let formElement = document.getElementById('itemForm')
 // create options for toppings
 toppings.forEach(item => {
     let span = document.createElement('span')
-    let option = document.createElement('input')
-    setAttributes(option, {
+    let input = document.createElement('input')
+    setAttributes(input, {
         'type':     'checkbox',
         'value':    item,
         'id':       item
     })
-
     let label = document.createElement('label')
-    setAttributes(label, {
-        'for':      item
-    })
-
     label.innerHTML = item
-    span.appendChild(option)
+    label.setAttribute('for', item)
+    
+    span.appendChild(input)
     span.appendChild(label)
 
-    formElement.querySelector('#toppings').appendChild(span)
+    formElement.querySelector('.toppings').appendChild(span)
 })
-
-let cart = []

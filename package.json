@@ -1,7 +1,15 @@
 {
   "name": "pizza_mobile",
-  "module": "index.ts",
-  "type": "module",
+  "version": "0.1.2",
+  "description": "pizzeria mobile responsive frontend",
+  "author": "neuthral <tomi.kurvinen@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neuthral/pizza_mobile.git"
+  },
+  "scripts": {
+    "server": "bun run server.js"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
